@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>게시글 작성 폼</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/headers.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+    .board_input{
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .board_input textarea{
+        width: 100%;
+        margin-top: 10px;
+        min-height: 300px;
+    }
+
+    .board_input input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+
+<body>
+
+<main>
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/board/write" class="nav-link">글쓰기</a></li>
+            <li class="nav-item"><a href="/board/list" class="nav-link">글 목록</a></li>
+            <!--      <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>-->
+            <!--      <li class="nav-item"><a href="#" class="nav-link">About</a></li>-->
+        </ul>
+    </header>
+    </div>
+</main>
+
+
+<div class="board_input">
+    <form action="/board/writepro" method="post" enctype="multipart/form-data">
+        <input name="title" type="text">
+        <textarea name="content"></textarea>
+        <input type="file" name="file">
+        <button type="submit">작성</button>
+    </form>
+</div>
+</body>
+</html>

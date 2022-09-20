@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>게시물 작성폼</title>
+</head>
+
+<style>
+  .layout{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .layout textarea{
+    width: 100%;
+    margin-top: 10px;
+    min-height: 300px;
+  }
+
+  .layout input{
+    width: 100%;
+    box-sizing: border-box;
+  }
+</style>
+
+<body>
+<main>
+  <header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="/board/write" class="nav-link">글쓰기</a></li>
+      <li class="nav-item"><a href="/board/list" class="nav-link">글 목록</a></li>
+      <!--      <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>-->
+      <!--      <li class="nav-item"><a href="#" class="nav-link">About</a></li>-->
+    </ul>
+  </header>
+  </div>
+</main>
+
+<div class="layout">
+  <form th:action="@{/board/update/{id}(id = ${board.id})}" method="post"> <!-- post방식으로 넘긴다. -->
+    <input name="title" type="text" th:value="${board.title}">
+    <textarea name="content" th:text="${board.content}"></textarea>
+    <button type="submit">수정</button>
+  </form>
+</div>
+</body>
+</html>
+
+<!-- -->
